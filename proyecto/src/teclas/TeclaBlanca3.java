@@ -1,5 +1,17 @@
 package teclas;
 
 public class TeclaBlanca3 extends TeclaBlanca{
-    TeclaBlanca(int n){};
+    TeclaBlanca3(int n){}
+
+    @Override
+    protected int[] getVerticesX() {
+        return new int[0];
+    }
+
+    @Override
+    protected int[] getVerticesY() {
+        return new int[0];
+    }
+
+    ;
 }
