@@ -1,5 +1,8 @@
 package teclas;
 
+import bpc.daw.consola.Consola;
+import bpc.daw.consola.FondoColorSolido;
+
 import java.awt.*;
 
 public class ElementoVisualTester {
@@ -7,12 +10,23 @@ public class ElementoVisualTester {
     private ElementoVisual elemento;
 
     public ElementoVisualTester(Graphics g, ElementoVisual e){
-        throw new UnsupportedOperationException("no programado");
+        this.graphics=g;
+        this.elemento=e;
     }
     public ElementoVisualTester(ElementoVisual e){
-        throw new UnsupportedOperationException("no programado");
+        this.elemento=e;
+        Consola consola = new Consola();
+        consola.getCapaFondo().setFondo(new FondoColorSolido(Color.GRAY));
+        this.graphics=consola.getCapaCanvas().getGraphics();
+
     }
     public void hacerPrueba(){
+        this.elemento.setPosicion(120,90);
+        this.elemento.setGraphics(this.graphics);
+        this.elemento.dibujar();
+        if (this.elemento instanceof Pulsable){
+            ((Pulsable) this.elemento).estaPulsado();
+        }
         throw new UnsupportedOperationException("no programado");
     }
 
