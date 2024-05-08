@@ -1,4 +1,6 @@
 package teclas;
 
-public class Medible {
+public interface Medible {
+    public int getAnchura();
+    public int getAltura();
 }
