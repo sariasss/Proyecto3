@@ -2,7 +2,7 @@ package teclas;
 
 import java.awt.*;
 
-public abstract class Tecla {
+public abstract class Tecla implements Medible, Pulsable {
     protected Point posicion;
     private int nota;
     private boolean pulsada;
