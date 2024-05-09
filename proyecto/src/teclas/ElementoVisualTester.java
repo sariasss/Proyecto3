@@ -25,13 +25,25 @@ public class ElementoVisualTester {
         this.elemento.setGraphics(this.graphics);
         this.elemento.dibujar();
         if (this.elemento instanceof Pulsable){
-            ((Pulsable) this.elemento).estaPulsado();
+            try {
+                ((Pulsable) this.elemento).setColorPulsado(Color.BLUE);
+                Thread.sleep(2000);
+                ((Pulsable) this.elemento).pulsar();
+                this.elemento.dibujar();
+                Thread.sleep(2000);
+                ((Pulsable) this.elemento).soltar();
+                this.elemento.dibujar();
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
-        throw new UnsupportedOperationException("no programado");
     }
 
     public static void main(String[] args) {
-        throw new UnsupportedOperationException("no programado");
+        Tecla t = new TeclaNegra(4);
+        ElementoVisualTester e = new ElementoVisualTester(t);
+        e.hacerPrueba();
     }
 }
 
