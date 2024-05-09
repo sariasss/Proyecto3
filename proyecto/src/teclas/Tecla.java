@@ -18,13 +18,9 @@ public abstract class Tecla implements Medible,Pulsable{
         return this.nota;
     }
     @Override
-    public int getAnchura(){
-        return 0;
-    }
+    public abstract int getAnchura();
     @Override
-    public int getAltura(){
-        return 0;
-    }
+    public abstract int getAltura();
     @Override
     public void setPosicion(int x, int y){
         this.posicion= new Point(x,y);
@@ -35,8 +31,38 @@ public abstract class Tecla implements Medible,Pulsable{
     }
     @Override
     public void dibujar(){
-
+        if ((this.posicion==null) || (this.graphics==null)){
+            throw new IllegalStateException("hay que llamar a setPosición y\n" +
+                    "setGraphics antes de llamar al método dibujar");
+        }
+        this.graphics.setColor(this.getColor());
+        Polygon p= new Polygon(this.getVerticesX(),this.getVerticesY(),4);
+        this.graphics.fillPolygon(p);
+        this.graphics.setColor(Color.BLACK);
+        this.graphics.drawPolygon(p);
     }
+    @Override
+    public void pulsar(){
+        this.pulsada=true;
+    }
+    @Override
+    public void soltar(){
+        this.pulsada=false;
+    }
+    @Override
+    public boolean estaPulsado(){
+        return this.pulsada;
+    }
+    @Override
+    public void setColorPulsado(Color c){
+        this.colorPulsada=c;
+    }
+    @Override
+    public Color getColorPulsado(){
+        return this.colorPulsada;
+    }
+
+    public abstract Color getColorNoPulsado();
     protected abstract int[] getVerticesX();
     protected abstract int [] getVerticesY();
 
