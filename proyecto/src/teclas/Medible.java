@@ -1,6 +1,6 @@
 package teclas;
 
-public interface Medible extends ElementoVisual {
+public interface Medible {
     public int getAnchura();
     public int getAltura();
 }

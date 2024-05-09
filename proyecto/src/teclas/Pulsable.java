@@ -10,6 +10,10 @@ public interface Pulsable {
     public Color getColorPulsado();
     public Color getColorNoPulsado();
     public default Color getColor(){
-        throw new UnsupportedOperationException("no programado");
+        Color c = this.getColorNoPulsado();
+        if (this.estaPulsado()){
+            c = this.getColorPulsado();
+        }
+        return c;
     }
 }
