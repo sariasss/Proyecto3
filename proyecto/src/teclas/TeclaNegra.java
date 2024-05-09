@@ -1,7 +1,5 @@
 package teclas;
 
-import bpc.daw.consola.Consola;
-
 import java.awt.*;
 
 public class TeclaNegra extends Tecla{
@@ -77,7 +75,7 @@ public class TeclaNegra extends Tecla{
     }
 
     @Override
-    public void setColorPulsado() {
+    public void setColorPulsado(Color c) {
 
     }
 
