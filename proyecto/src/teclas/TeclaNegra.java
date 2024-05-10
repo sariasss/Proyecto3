@@ -26,6 +26,8 @@ public class TeclaNegra extends Tecla{
     }
     @Override
     protected int[] getVerticesX() {
+        int n=TeclaNegra.ANCHURA;
+        int b=TeclaBlanca.ANCHURA;
         int[] verticesX = new int[4];
         int x = this.getAnchura();
         verticesX[0] = posicion.x;
@@ -45,44 +47,5 @@ public class TeclaNegra extends Tecla{
         verticesY[2] = posicion.y + y;
         verticesY[3] = posicion.y + y;
         return verticesY;
-    }
-
-    @Override
-    public void setPosicion(int x, int y) {
-
-    }
-
-    @Override
-    public void setGraphics(Graphics g) {
-
-    }
-
-    @Override
-    public void dibujar() {
-
-    }
-    @Override
-    public void pulsar() {
-
-    }
-
-    @Override
-    public void soltar() {
-
-    }
-
-    @Override
-    public boolean estaPulsado() {
-        return false;
-    }
-
-    @Override
-    public void setColorPulsado() {
-
-    }
-
-    @Override
-    public Color getColorPulsado() {
-        return null;
     }
 }

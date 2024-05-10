@@ -14,24 +14,25 @@ public class ElementoVisualTester {
         this.elemento=e;
     }
     public ElementoVisualTester(ElementoVisual e){
-        this.elemento=e;
         Consola consola = new Consola();
         consola.getCapaFondo().setFondo(new FondoColorSolido(Color.GRAY));
         this.graphics=consola.getCapaCanvas().getGraphics();
+        e.setGraphics(this.graphics);
+        this.elemento=e;
 
     }
     public void hacerPrueba(){
         this.elemento.setPosicion(120,90);
         this.elemento.setGraphics(this.graphics);
         this.elemento.dibujar();
-        if (this.elemento instanceof Pulsable){
+        if (this.elemento instanceof Pulsable p){
             try {
-                ((Pulsable) this.elemento).setColorPulsado(Color.BLUE);
+                p.setColorPulsado(Color.BLUE);
                 Thread.sleep(2000);
-                ((Pulsable) this.elemento).pulsar();
+                p.pulsar();
                 this.elemento.dibujar();
                 Thread.sleep(2000);
-                ((Pulsable) this.elemento).soltar();
+                p.soltar();
                 this.elemento.dibujar();
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -46,4 +47,3 @@ public class ElementoVisualTester {
         e.hacerPrueba();
     }
 }
-

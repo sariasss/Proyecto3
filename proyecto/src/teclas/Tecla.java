@@ -31,12 +31,18 @@ public abstract class Tecla implements Medible,Pulsable{
     }
     @Override
     public void dibujar(){
+        int vertice=6;
+        if (this instanceof TeclaBlanca2 a){
+            vertice=8;
+        }else if (this instanceof TeclaNegra b){
+            vertice=4;
+        }
         if ((this.posicion==null) || (this.graphics==null)){
             throw new IllegalStateException("hay que llamar a setPosición y\n" +
                     "setGraphics antes de llamar al método dibujar");
         }
         this.graphics.setColor(this.getColor());
-        Polygon p= new Polygon(this.getVerticesX(),this.getVerticesY(),4);
+        Polygon p= new Polygon(this.getVerticesX(),this.getVerticesY(),vertice);
         this.graphics.fillPolygon(p);
         this.graphics.setColor(Color.BLACK);
         this.graphics.drawPolygon(p);
