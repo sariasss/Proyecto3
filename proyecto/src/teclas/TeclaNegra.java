@@ -11,6 +11,31 @@ public class TeclaNegra extends Tecla{
     }
 
 
+    @Override
+    public void pulsar() {
+
+    }
+
+    @Override
+    public void soltar() {
+
+    }
+
+    @Override
+    public boolean estaPulsado() {
+        return false;
+    }
+
+    @Override
+    public void setColorPulsado(Color c) {
+
+    }
+
+    @Override
+    public Color getColorPulsado() {
+        return null;
+    }
+
     public Color getColorNoPulsado(){
         return Color.BLACK;
     }
@@ -48,44 +73,6 @@ public class TeclaNegra extends Tecla{
     @Override
     public void setPosicion(int x, int y) {
 
-    }
-
-    @Override
-    public void setGraphics(Graphics g) {
-
-    }
-
-    @Override
-    public void dibujar() {
-
-    }
-    @Override
-    public void pulsar() {
-
-    }
-
-    @Override
-    public void soltar() {
-
-    }
-
-    @Override
-    public boolean estaPulsado() {
-        return false;
-    }
-
-    @Override
-    public void setColorPulsado(Color c) {
-
-    }
-
-    @Override
-    public Color getColorPulsado() {
-        return null;
-    }
-
-    @Override
-    public void setPosicion(int x, int y) {
 
     }
 
@@ -97,45 +84,8 @@ public class TeclaNegra extends Tecla{
     @Override
     public void dibujar() {
 
-    }
-
-    @Override
-    public int getAnchura() {
-        return 0;
-    }
-
-    @Override
-    public int getAltura() {
-        return 0;
-    }
-
-    @Override
-    public void pulsar() {
-
-    }
-
-    @Override
-    public void soltar() {
-
-    }
-
-    @Override
-    public boolean estaPulsado() {
-        return false;
-    }
-
-    @Override
-    public void setColorPulsado(Color c) {
-
-    }
-
-    @Override
-    public Color getColorPulsado() {
-        return null;
-    }
-
-    @Override
-    public Color getColorNoPulsado() {
-        return null;
     }
 }
+
+
+
