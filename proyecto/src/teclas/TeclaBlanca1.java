@@ -2,74 +2,41 @@ package teclas;
 
 import java.awt.*;
 
-public class TeclaBlanca1 extends TeclaBlanca{
-    TeclaBlanca1(int n){
+public class TeclaBlanca1 extends TeclaBlanca {
+    TeclaBlanca1(int n) {
         super(n);
-
     }
 
     @Override
     protected int[] getVerticesX() {
-        int[] verticesX = new int[6];
-        verticesX[0] = posicion.x;
-        verticesX[1] = (posicion.x + TeclaBlanca.ANCHURA)-(TeclaNegra.ANCHURA/2);
-        verticesX[2] = (posicion.x + TeclaBlanca.ANCHURA)-(TeclaNegra.ANCHURA/2);
-        verticesX[3] = posicion.x + TeclaBlanca.ANCHURA;
-        verticesX[4] = posicion.x + TeclaBlanca.ANCHURA;
-        verticesX[5] = posicion.x;
-        return verticesX;
+        int n=TeclaNegra.ANCHURA;
+        int b=TeclaBlanca.ANCHURA;
+        int[] verX=  new int[6];
+        int x= posicion.x;
+        verX[0]=x;
+        verX[1]=x+b-n/2;
+        verX[2]=x+b-n/2;
+        verX[3]=x+b;
+        verX[4]=x+b;
+        verX[5]=x;
+
+        return verX;
     }
     @Override
     protected int[] getVerticesY() {
-        int[] verticesY = new int[6];
-        verticesY[0] = posicion.y;
-        verticesY[1] = posicion.y;
-        verticesY[2] = posicion.y + TeclaNegra.ALTURA;
-        verticesY[3] = posicion.y + TeclaNegra.ALTURA;
-        verticesY[4] = posicion.y + TeclaBlanca.ALTURA;
-        verticesY[5] = posicion.y + TeclaBlanca.ALTURA;
-        return verticesY;
+        int[] verY= new int[6];
+        int y=posicion.y;
+        verY[0]=y;
+        verY[1]=y;
+        verY[2]=y+TeclaNegra.ALTURA;
+        verY[3]=y+TeclaNegra.ALTURA;
+        verY[4]=y+TeclaBlanca.ALTURA;
+        verY[5]=y+TeclaBlanca.ALTURA;
+
+        return verY;
     }
 
-    @Override
-    public void setPosicion(int x, int y) {
 
-    }
-
-    @Override
-    public void setGraphics(Graphics g) {
-
-    }
-
-    @Override
-    public void dibujar() {
-
-    }
-
-    @Override
-    public void pulsar() {
-
-    }
-
-    @Override
-    public void soltar() {
-
-    }
-
-    @Override
-    public boolean estaPulsado() {
-        return false;
-    }
-
-    @Override
-    public void setColorPulsado(Color c) {
-
-    }
-
-    @Override
-    public Color getColorPulsado() {
-        return null;
-    }
-
-    ;
 }
+
+

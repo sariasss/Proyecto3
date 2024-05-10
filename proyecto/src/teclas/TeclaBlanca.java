@@ -13,7 +13,7 @@ public abstract class TeclaBlanca extends Tecla{
 
 
     public Color getColorNoPulsado() {
-        throw new UnsupportedOperationException("No programado");
+        return Color.WHITE;
     }
 
     public int getAnchura() {
