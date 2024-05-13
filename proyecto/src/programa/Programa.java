@@ -2,6 +2,7 @@ package programa;
 
 import bpc.daw.consola.*;
 import java.awt.*;
+import java.awt.event.KeyEvent;
 
 
 public class Programa {
@@ -9,7 +10,7 @@ public class Programa {
 
         Consola consola = new Consola();
         CapaFondo capaFondo = consola.getCapaFondo();
-        capaFondo.setFondo(new FondoColorSolido(new Color(0, 0, 70)));
+        capaFondo.setFondo(new FondoColorSolido(new Color(237, 181, 255)));
 
 
         CapaTexto capaTexto = consola.getCapaTexto();
@@ -30,9 +31,5 @@ public class Programa {
         reproductorMidi.conectar(piano);
         reproductorMidi.reproducir(rutaArchivo);
 
-        while (!consola.getTeclado().teclaPulsada(java.awt.event.KeyEvent.VK_ESCAPE)) {
-            consola.esperarSiguienteFrame();
-        }
-        System.exit(0);
     }
 }
