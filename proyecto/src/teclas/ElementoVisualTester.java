@@ -47,4 +47,3 @@ public class ElementoVisualTester {
         e.hacerPrueba();
     }
 }
-

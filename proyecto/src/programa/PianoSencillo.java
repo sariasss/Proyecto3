@@ -1,7 +1,6 @@
 package programa;
 
-import teclas.Tecla;
-import teclas.TeclaFactory;
+import teclas.*;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -17,7 +16,7 @@ public class PianoSencillo extends Piano {
         super(teclaInicial,teclaFinal);
         this.teclas = new HashMap<>();
 
-        for (int i=this.getTeclaInicial(); i < this.getTeclaFinal(); i++){
+        for (int i = this.getTeclaInicial(); i < this.getTeclaFinal(); i++){
             this.teclas.put(TeclaFactory.crearTecla(i).getNumeroNota(),TeclaFactory.crearTecla(i));
         }
     }
@@ -26,12 +25,18 @@ public class PianoSencillo extends Piano {
     @Override
     public void dibujar() {
         Point punto = new Point(this.posicion.x, this.posicion.y);
-
+        int x = punto.x;
+        int y = punto.y;
         for (Tecla tecla : teclas.values()) {
             tecla.setGraphics(this.graphics);
-            tecla.setPosicion(punto);
+            tecla.setPosicion(x, y);
             tecla.dibujar();
-            punto.getX() += tecla.getAncho();
+           if (tecla instanceof TeclaBlanca3){
+               x +=tecla.getAnchura();
+           }else {
+               x +=tecla.getAnchura()- (TeclaNegra.ANCHURA/2);
+           }
+
         }
     }
 
@@ -41,3 +46,7 @@ public class PianoSencillo extends Piano {
     }
 
 }
+
+
+
+
