@@ -11,9 +11,8 @@ public abstract class TeclaBlanca extends Tecla{
         super(n);
     }
 
-
     public Color getColorNoPulsado() {
-        throw new UnsupportedOperationException("No programado");
+        return Color.WHITE;
     }
 
     public int getAnchura() {
@@ -23,5 +22,14 @@ public abstract class TeclaBlanca extends Tecla{
     public int getAltura() {
         return ALTURA;
     }
+
+    protected int[] getVerticesX() {
+        return new int[0];
+    }
+
+    protected int[] getVerticesY() {
+        return new int[0];
+    }
 }
+
 
