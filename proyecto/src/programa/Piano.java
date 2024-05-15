@@ -41,7 +41,7 @@ public abstract class Piano implements ElementoVisual {
     }
 
     @Override
-    public void dibujar() {
+    public void dibujar(){
 
-    }
+}
 }
