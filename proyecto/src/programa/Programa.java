@@ -19,7 +19,7 @@ public class Programa {
         capaTexto.print("Introduzca la ruta del archivo MIDI: ");
         String rutaArchivo = teclado.leerCadenaCaracteres();
 
-        PianoSencillo piano = new PianoSencillo(24, 108);
+        Piano piano = new MultiPiano(12, 53);
 
         CapaCanvas capaCanvas = consola.getCapaCanvas();
         Graphics graphics = capaCanvas.getGraphics();

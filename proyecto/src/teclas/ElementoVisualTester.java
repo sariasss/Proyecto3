@@ -2,6 +2,9 @@ package teclas;
 
 import bpc.daw.consola.Consola;
 import bpc.daw.consola.FondoColorSolido;
+import programa.MultiPiano;
+import programa.Piano;
+import programa.PianoSencillo;
 
 import java.awt.*;
 
@@ -42,7 +45,7 @@ public class ElementoVisualTester {
     }
 
     public static void main(String[] args) {
-        Tecla t = new TeclaNegra(4);
+        Piano t = new PianoSencillo(1,16);
         ElementoVisualTester e = new ElementoVisualTester(t);
         e.hacerPrueba();
     }
