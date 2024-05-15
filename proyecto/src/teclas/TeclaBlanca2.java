@@ -3,10 +3,9 @@ package teclas;
 import java.awt.*;
 
 public class TeclaBlanca2 extends TeclaBlanca{
-
-    TeclaBlanca2(int n) {
+    TeclaBlanca2(int n){
         super(n);
-    }
+    };
 
     @Override
     protected int[] getVerticesX() {

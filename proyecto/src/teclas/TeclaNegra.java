@@ -1,7 +1,5 @@
 package teclas;
 
-import bpc.daw.consola.Consola;
-
 import java.awt.*;
 
 public class TeclaNegra extends Tecla{
@@ -12,39 +10,14 @@ public class TeclaNegra extends Tecla{
         super(n);
     }
 
-
-    public Color getColorNoPulsado(){
-        return Color.BLACK;
-    }
-
-    public int getAltura(){
-        return ALTURA;
-    }
-
-    public int getAnchura(){
-        return ANCHURA;
-    }
     @Override
     protected int[] getVerticesX() {
-        int[] verticesX = new int[4];
-        int x = this.getAnchura();
-        verticesX[0] = posicion.x;
-        verticesX[1] = posicion.x + x;
-        verticesX[2] = posicion.x + x;
-        verticesX[3] = posicion.x;
-        return verticesX;
-
+        return new int[0];
     }
 
     @Override
     protected int[] getVerticesY() {
-        int[] verticesY = new int[4];
-        int y = this.getAltura();
-        verticesY[0] = posicion.y;
-        verticesY[1] = posicion.y;
-        verticesY[2] = posicion.y + y;
-        verticesY[3] = posicion.y + y;
-        return verticesY;
+        return new int[0];
     }
 
     @Override
@@ -61,6 +34,17 @@ public class TeclaNegra extends Tecla{
     public void dibujar() {
 
     }
+
+    @Override
+    public int getAnchura() {
+        return 0;
+    }
+
+    @Override
+    public int getAltura() {
+        return 0;
+    }
+
     @Override
     public void pulsar() {
 
@@ -76,10 +60,18 @@ public class TeclaNegra extends Tecla{
         return false;
     }
 
+    @Override
+    public void setColorPulsado(Color c) {
 
+    }
 
     @Override
     public Color getColorPulsado() {
+        return null;
+    }
+
+    @Override
+    public Color getColorNoPulsado() {
         return null;
     }
 }
