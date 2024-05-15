@@ -11,7 +11,6 @@ public abstract class TeclaBlanca extends Tecla{
         super(n);
     }
 
-
     public Color getColorNoPulsado() {
         return Color.WHITE;
     }
@@ -23,5 +22,14 @@ public abstract class TeclaBlanca extends Tecla{
     public int getAltura() {
         return this.ALTURA;
     }
+
+    protected int[] getVerticesX() {
+        return new int[0];
+    }
+
+    protected int[] getVerticesY() {
+        return new int[0];
+    }
 }
+
 
