@@ -1,5 +1,6 @@
 package Test;
 
+import programa.Piano;
 import teclas.ElementoVisualTester;
 
 public class test1 {
@@ -12,5 +13,6 @@ public class test1 {
         assertEquals(72, piano.getTeclaFinal());
         ElementoVisualTester tester = new ElementoVisualTester(piano);
         assertTrue(tester.hacerPrueba());
+
     }
 }

@@ -28,10 +28,10 @@ public class PianoSencillo extends Piano {
         Point punto = new Point(this.posicion.x, this.posicion.y);
 
         for (Tecla tecla : teclas.values()) {
+            punto.x += tecla.getAnchura();
             tecla.setGraphics(this.graphics);
             tecla.setPosicion(punto.x, punto.y);
             tecla.dibujar();
-            punto.x += tecla.getAnchura();
         }
     }
 
